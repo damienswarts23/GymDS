@@ -16,5 +16,22 @@ namespace gymApp
         {
             InitializeComponent();
         }
+
+        private void btnChangeText_Click(object sender, EventArgs e)
+        {
+            if(lblText.Text == "This will be a gym app")
+            {
+                lblText.Text = "This is now a gym app";
+            }
+            else
+            {
+                lblText.Text = "This will be a gym app again";
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
