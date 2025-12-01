@@ -49,5 +49,12 @@ namespace gymApp
             this.Hide();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Signup2 s2 = new Signup2();
+            s2.Show();
+            this.Hide();
+        }
     }
 }

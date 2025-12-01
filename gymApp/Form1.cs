@@ -70,5 +70,12 @@ namespace gymApp
             l.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SignUp s = new SignUp();
+            s.Show();
+            this.Hide();
+        }
     }
 }
