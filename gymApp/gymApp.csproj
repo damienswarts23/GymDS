@@ -72,6 +72,12 @@
     <Compile Include="Signup2.Designer.cs">
       <DependentUpon>Signup2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Signup3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup3.Designer.cs">
+      <DependentUpon>Signup3.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Signup2.resx">
       <DependentUpon>Signup2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup3.resx">
+      <DependentUpon>Signup3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

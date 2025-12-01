@@ -1,6 +1,6 @@
 ﻿namespace gymApp
 {
-    partial class login
+    partial class Signup3
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblText = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,6 +42,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblText = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,100 +59,17 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.btnLogin);
-            this.panel5.Controls.Add(this.txtPassword);
-            this.panel5.Controls.Add(this.txtUsername);
-            this.panel5.Controls.Add(this.lblPassword);
-            this.panel5.Controls.Add(this.lblUsername);
+            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.listBox1);
+            this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.lblText);
-            this.panel5.Location = new System.Drawing.Point(181, 22);
+            this.panel5.Location = new System.Drawing.Point(48, 22);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(443, 346);
-            this.panel5.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(71, 302);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(315, 16);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "If you do not have an account click the sign up button";
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Silver;
-            this.btnLogin.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(96, 236);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(271, 53);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(224, 178);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(184, 38);
-            this.txtPassword.TabIndex = 6;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(224, 130);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(184, 38);
-            this.txtUsername.TabIndex = 5;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(22, 184);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(171, 32);
-            this.lblPassword.TabIndex = 4;
-            this.lblPassword.Text = "Password : ";
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(22, 136);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(177, 32);
-            this.lblUsername.TabIndex = 3;
-            this.lblUsername.Text = "Username : ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(104, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Please Login with valid gym credentials.";
-            // 
-            // lblText
-            // 
-            this.lblText.AutoSize = true;
-            this.lblText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblText.Font = new System.Drawing.Font("Modern No. 20", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.ForeColor = System.Drawing.Color.Black;
-            this.lblText.Location = new System.Drawing.Point(151, 20);
-            this.lblText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(138, 48);
-            this.lblText.TabIndex = 1;
-            this.lblText.Text = "Login";
-            this.lblText.Click += new System.EventHandler(this.lblText_Click);
+            this.panel5.Size = new System.Drawing.Size(716, 321);
+            this.panel5.TabIndex = 10;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel4
             // 
@@ -164,8 +80,7 @@
             this.panel4.Location = new System.Drawing.Point(-24, 390);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(848, 66);
-            this.panel4.TabIndex = 9;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.panel4.TabIndex = 14;
             // 
             // button2
             // 
@@ -176,7 +91,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 63);
             this.button2.TabIndex = 13;
-            this.button2.Text = "Sign Up";
+            this.button2.Text = "Complete Sign Up";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -206,7 +121,6 @@
             this.label9.Size = new System.Drawing.Size(173, 48);
             this.label9.TabIndex = 10;
             this.label9.Text = "GymDS";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // panel3
             // 
@@ -216,8 +130,7 @@
             this.panel3.Location = new System.Drawing.Point(-24, 255);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(848, 66);
-            this.panel3.TabIndex = 7;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.TabIndex = 12;
             // 
             // label7
             // 
@@ -232,7 +145,6 @@
             this.label7.Size = new System.Drawing.Size(173, 48);
             this.label7.TabIndex = 8;
             this.label7.Text = "GymDS";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label5
             // 
@@ -247,7 +159,6 @@
             this.label5.Size = new System.Drawing.Size(173, 48);
             this.label5.TabIndex = 6;
             this.label5.Text = "GymDS";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel2
             // 
@@ -257,8 +168,7 @@
             this.panel2.Location = new System.Drawing.Point(-24, 124);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(848, 66);
-            this.panel2.TabIndex = 8;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.TabIndex = 13;
             // 
             // label6
             // 
@@ -273,7 +183,6 @@
             this.label6.Size = new System.Drawing.Size(173, 48);
             this.label6.TabIndex = 7;
             this.label6.Text = "GymDS";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
@@ -288,7 +197,6 @@
             this.label4.Size = new System.Drawing.Size(173, 48);
             this.label4.TabIndex = 5;
             this.label4.Text = "GymDS";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel1
             // 
@@ -298,8 +206,7 @@
             this.panel1.Location = new System.Drawing.Point(-24, -5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(848, 66);
-            this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 11;
             // 
             // label3
             // 
@@ -314,7 +221,6 @@
             this.label3.Size = new System.Drawing.Size(173, 48);
             this.label3.TabIndex = 4;
             this.label3.Text = "GymDS";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -329,22 +235,92 @@
             this.label2.Size = new System.Drawing.Size(173, 48);
             this.label2.TabIndex = 3;
             this.label2.Text = "GymDS";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // login
+            // lblText
+            // 
+            this.lblText.AutoSize = true;
+            this.lblText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblText.Font = new System.Drawing.Font("Modern No. 20", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.ForeColor = System.Drawing.Color.Black;
+            this.lblText.Location = new System.Drawing.Point(259, 9);
+            this.lblText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(180, 48);
+            this.lblText.TabIndex = 3;
+            this.lblText.Text = "Sign Up";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(303, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "The Total amount you owe is :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(351, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 25);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "____";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(27, 139);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(661, 100);
+            this.listBox1.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(28, 263);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(156, 25);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "I am paying : R";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(190, 260);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(240, 30);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(312, 361);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(166, 16);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Please pay the full amount ";
+            // 
+            // Signup3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "login";
+            this.Name = "Signup3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login";
-            this.Load += new System.EventHandler(this.login_Load);
+            this.Text = "Signup3";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -356,6 +332,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -363,25 +340,24 @@
 
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblText;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }
