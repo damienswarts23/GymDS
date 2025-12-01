@@ -33,5 +33,10 @@ namespace gymApp
         {
 
         }
+
+        private void lblText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
