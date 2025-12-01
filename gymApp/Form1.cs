@@ -63,5 +63,12 @@ namespace gymApp
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            login l = new login();
+            l.Show();
+            this.Hide();
+        }
     }
 }
