@@ -39,14 +39,14 @@
             this.lblText.Location = new System.Drawing.Point(307, 57);
             this.lblText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(284, 28);
+            this.lblText.Size = new System.Drawing.Size(290, 29);
             this.lblText.TabIndex = 0;
             this.lblText.Text = "This will be a gym app";
             // 
             // btnChangeText
             // 
-            this.btnChangeText.Location = new System.Drawing.Point(355, 240);
-            this.btnChangeText.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnChangeText.Location = new System.Drawing.Point(361, 227);
+            this.btnChangeText.Margin = new System.Windows.Forms.Padding(6);
             this.btnChangeText.Name = "btnChangeText";
             this.btnChangeText.Size = new System.Drawing.Size(202, 90);
             this.btnChangeText.TabIndex = 1;
@@ -62,7 +62,7 @@
             this.Controls.Add(this.btnChangeText);
             this.Controls.Add(this.lblText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
