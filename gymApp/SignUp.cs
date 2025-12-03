@@ -1,12 +1,18 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
+
 
 namespace gymApp
 {
@@ -59,24 +65,28 @@ namespace gymApp
             }
             else
             {
+                string Name = txtUsername.Text;
                 if (string.IsNullOrEmpty(txtSurname.Text))
                 {
                     MessageBox.Show("Please fill in yout Surname");
                 }
                 else
                 {
+                    string Surname = txtSurname.Text;
                     if (cbmGender.SelectedItem == null)
                     {
                         MessageBox.Show("Select your gender please");
                     }
                     else
                     {
+                        string Gender = cbmGender.SelectedItem.ToString();
                         if (string.IsNullOrEmpty(txtEmail.Text))
                         {
                             MessageBox.Show("Please enter your email");
                         }
                         else
                         {
+                            string Email = txtEmail.Text;
                             //This part here is the validation that is for the selected goals
                             string SelectedGoals = "";
 
@@ -100,16 +110,50 @@ namespace gymApp
                             {
                                 SelectedGoals += "Core, ";
                             }
+                            //Check if the user has selected atleast one gym plan
                             if (SelectedGoals != "")
                             {
-                                // Remove last comma and space
-                                SelectedGoals = SelectedGoals.Substring(0, SelectedGoals.Length - 2);
-                                MessageBox.Show("Selected goals: " + SelectedGoals);
+                                SelectedGoals = SelectedGoals.Substring(0, SelectedGoals.Length - 2);//remobing the spaces between the different chekboxes
+                                
 
-                                //If everyting is filled in then this will go to the next page
-                                Signup2 s2 = new Signup2();
-                                s2.Show();
-                                this.Hide();
+                                DateTime date = dob.Value;//Placing the date of birth into a string variable so that it can go into the database and 
+                                string Dob = date.ToString();//Pharsing the date to string
+
+                                DBConnection db = new DBConnection();//object of database class
+                                try
+                                {
+                                    // Use your connection class
+                                    using (MySqlConnection conn = db.Connect())
+                                    {
+                                        //This is the sql query that will place the data into the database
+                                        string query = "INSERT INTO members (name, surname, gender, date_of_birth, email,gym_goals) VALUES (@name, @surname,@gender,@date_of_birth, @email,@gym_goals)";
+                                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                                        {
+                                            //Placing the variables with the user data into their placeholders 
+                                            cmd.Parameters.AddWithValue("@name", Name);
+                                            cmd.Parameters.AddWithValue("@surname", Surname);
+                                            cmd.Parameters.AddWithValue("@gender", Gender);
+                                            cmd.Parameters.AddWithValue("@date_of_birth", Dob);
+                                            cmd.Parameters.AddWithValue("@email", Email);
+                                            cmd.Parameters.AddWithValue("@gym_goals",SelectedGoals);
+
+
+
+                                            int rowsAffected = cmd.ExecuteNonQuery();//executing the command so that it can happen in the database
+                                            MessageBox.Show(rowsAffected > 0 ? "User added successfully!" : "Failed to add user.");
+
+
+                                            //This is only done so that i can move on to the next page
+                                            Signup2 s2 = new Signup2();
+                                            s2.Show();
+                                            this.Hide();
+                                        }
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Error: " + ex.Message);
+                                }
                             }
                             else
                             {
