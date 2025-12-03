@@ -37,27 +37,27 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSelectPlan = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.lblText = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkCore = new System.Windows.Forms.CheckBox();
+            this.chkGlutes = new System.Windows.Forms.CheckBox();
+            this.chkArms = new System.Windows.Forms.CheckBox();
+            this.chkUpperBody = new System.Windows.Forms.CheckBox();
+            this.chkLegs = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dob = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbmGender = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -184,42 +184,42 @@
             this.panel3.Size = new System.Drawing.Size(848, 66);
             this.panel3.TabIndex = 11;
             // 
-            // button2
+            // btnSelectPlan
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(588, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(240, 63);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Select Plan";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSelectPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSelectPlan.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectPlan.ForeColor = System.Drawing.Color.White;
+            this.btnSelectPlan.Location = new System.Drawing.Point(588, 0);
+            this.btnSelectPlan.Name = "btnSelectPlan";
+            this.btnSelectPlan.Size = new System.Drawing.Size(240, 63);
+            this.btnSelectPlan.TabIndex = 13;
+            this.btnSelectPlan.Text = "Select Plan";
+            this.btnSelectPlan.UseVisualStyleBackColor = false;
+            this.btnSelectPlan.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnSelectPlan);
+            this.panel4.Controls.Add(this.btnBack);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Location = new System.Drawing.Point(-24, 390);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(848, 66);
             this.panel4.TabIndex = 13;
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(22, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 63);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBack.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(22, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(240, 63);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // label9
             // 
@@ -273,11 +273,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.chkCore);
+            this.groupBox2.Controls.Add(this.chkGlutes);
+            this.groupBox2.Controls.Add(this.chkArms);
+            this.groupBox2.Controls.Add(this.chkUpperBody);
+            this.groupBox2.Controls.Add(this.chkLegs);
             this.groupBox2.Location = new System.Drawing.Point(374, 77);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(335, 231);
@@ -285,72 +285,73 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gym Goals";
             // 
-            // checkBox5
+            // chkCore
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(6, 177);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(81, 29);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "Core";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.chkCore.AutoSize = true;
+            this.chkCore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCore.Location = new System.Drawing.Point(6, 177);
+            this.chkCore.Name = "chkCore";
+            this.chkCore.Size = new System.Drawing.Size(81, 29);
+            this.chkCore.TabIndex = 4;
+            this.chkCore.Text = "Core";
+            this.chkCore.UseVisualStyleBackColor = true;
+            this.chkCore.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
-            // checkBox4
+            // chkGlutes
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(6, 131);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(96, 29);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Glutes";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkGlutes.AutoSize = true;
+            this.chkGlutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkGlutes.Location = new System.Drawing.Point(6, 131);
+            this.chkGlutes.Name = "chkGlutes";
+            this.chkGlutes.Size = new System.Drawing.Size(96, 29);
+            this.chkGlutes.TabIndex = 3;
+            this.chkGlutes.Text = "Glutes";
+            this.chkGlutes.UseVisualStyleBackColor = true;
+            this.chkGlutes.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
-            // checkBox3
+            // chkArms
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(6, 93);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(84, 29);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Arms";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkArms.AutoSize = true;
+            this.chkArms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkArms.Location = new System.Drawing.Point(6, 93);
+            this.chkArms.Name = "chkArms";
+            this.chkArms.Size = new System.Drawing.Size(84, 29);
+            this.chkArms.TabIndex = 2;
+            this.chkArms.Text = "Arms";
+            this.chkArms.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkUpperBody
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(6, 57);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(147, 29);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Upper Body";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkUpperBody.AutoSize = true;
+            this.chkUpperBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkUpperBody.Location = new System.Drawing.Point(6, 57);
+            this.chkUpperBody.Name = "chkUpperBody";
+            this.chkUpperBody.Size = new System.Drawing.Size(147, 29);
+            this.chkUpperBody.TabIndex = 1;
+            this.chkUpperBody.Text = "Upper Body";
+            this.chkUpperBody.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkLegs
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(6, 18);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(81, 29);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Legs";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.chkLegs.AutoSize = true;
+            this.chkLegs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkLegs.Location = new System.Drawing.Point(6, 18);
+            this.chkLegs.Name = "chkLegs";
+            this.chkLegs.Size = new System.Drawing.Size(81, 29);
+            this.chkLegs.TabIndex = 0;
+            this.chkLegs.Text = "Legs";
+            this.chkLegs.UseVisualStyleBackColor = true;
+            this.chkLegs.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dob);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbmGender);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtSurname);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.lblUsername);
@@ -361,13 +362,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Information";
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(141, 177);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 30);
-            this.textBox3.TabIndex = 15;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(141, 177);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(149, 30);
+            this.txtEmail.TabIndex = 15;
             // 
             // label11
             // 
@@ -379,13 +380,13 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "Email : ";
             // 
-            // dateTimePicker1
+            // dob
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(157, 137);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(119, 22);
-            this.dateTimePicker1.TabIndex = 13;
-            this.dateTimePicker1.Value = new System.DateTime(2025, 12, 1, 16, 33, 35, 0);
+            this.dob.Location = new System.Drawing.Point(157, 137);
+            this.dob.Name = "dob";
+            this.dob.Size = new System.Drawing.Size(119, 22);
+            this.dob.TabIndex = 13;
+            this.dob.Value = new System.DateTime(2025, 12, 1, 16, 33, 35, 0);
             // 
             // label10
             // 
@@ -397,16 +398,16 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Date of Birth :";
             // 
-            // comboBox1
+            // cbmGender
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cbmGender.AutoCompleteCustomSource.AddRange(new string[] {
             "Male",
             "Female"});
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(141, 98);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 24);
-            this.comboBox1.TabIndex = 11;
+            this.cbmGender.FormattingEnabled = true;
+            this.cbmGender.Location = new System.Drawing.Point(141, 98);
+            this.cbmGender.Name = "cbmGender";
+            this.cbmGender.Size = new System.Drawing.Size(149, 24);
+            this.cbmGender.TabIndex = 11;
             // 
             // label8
             // 
@@ -418,14 +419,14 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Gender : ";
             // 
-            // textBox1
+            // txtSurname
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(141, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 30);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.Location = new System.Drawing.Point(141, 55);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(149, 30);
+            this.txtSurname.TabIndex = 9;
+            this.txtSurname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -498,9 +499,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSelectPlan;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -508,19 +509,19 @@
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbmGender;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dob;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox chkGlutes;
+        private System.Windows.Forms.CheckBox chkArms;
+        private System.Windows.Forms.CheckBox chkUpperBody;
+        private System.Windows.Forms.CheckBox chkLegs;
+        private System.Windows.Forms.CheckBox chkCore;
         private System.Windows.Forms.Label label12;
     }
 }

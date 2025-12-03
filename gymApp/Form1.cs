@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -73,9 +74,25 @@ namespace gymApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SignUp s = new SignUp();
-            s.Show();
-            this.Hide();
+
+
+            DBConnection db = new DBConnection();
+
+            try
+            {
+                using (MySqlConnection conn = db.Connect())
+                {
+                    MessageBox.Show("Connected to MySQL!");
+                    SignUp s = new SignUp();
+                    s.Show();
+                    this.Hide();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+           
         }
     }
 }
