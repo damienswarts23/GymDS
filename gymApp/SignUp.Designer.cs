@@ -384,7 +384,7 @@
             // 
             this.dob.Location = new System.Drawing.Point(157, 137);
             this.dob.Name = "dob";
-            this.dob.Size = new System.Drawing.Size(119, 22);
+            this.dob.Size = new System.Drawing.Size(121, 22);
             this.dob.TabIndex = 13;
             this.dob.Value = new System.DateTime(2025, 12, 1, 16, 33, 35, 0);
             // 
@@ -404,6 +404,10 @@
             "Male",
             "Female"});
             this.cbmGender.FormattingEnabled = true;
+            this.cbmGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
             this.cbmGender.Location = new System.Drawing.Point(141, 98);
             this.cbmGender.Name = "cbmGender";
             this.cbmGender.Size = new System.Drawing.Size(149, 24);
