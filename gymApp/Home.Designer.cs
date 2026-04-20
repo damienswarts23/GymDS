@@ -37,23 +37,23 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.lblText = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.lblText = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -133,6 +133,104 @@
             this.panel8.Size = new System.Drawing.Size(804, 331);
             this.panel8.TabIndex = 10;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(159, 243);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(517, 16);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "*NEW EQUEPMENT ALERT* be sure to check it out when you visit a branch anywhere";
+            // 
+            // panel16
+            // 
+            this.panel16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel16.BackgroundImage")));
+            this.panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel16.Location = new System.Drawing.Point(30, 219);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(75, 69);
+            this.panel16.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(153, 160);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(517, 16);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "*NEW EQUEPMENT ALERT* be sure to check it out when you visit a branch anywhere";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Gray;
+            this.panel15.Location = new System.Drawing.Point(137, 103);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(10, 219);
+            this.panel15.TabIndex = 15;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Black;
+            this.panel14.Location = new System.Drawing.Point(21, 129);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(345, 10);
+            this.panel14.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(156, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 31);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Notifications";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(15, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 31);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "GymDS";
+            // 
+            // panel13
+            // 
+            this.panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel13.BackgroundImage")));
+            this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel13.Location = new System.Drawing.Point(30, 145);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(75, 58);
+            this.panel13.TabIndex = 5;
+            // 
+            // lblText
+            // 
+            this.lblText.AutoSize = true;
+            this.lblText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblText.Font = new System.Drawing.Font("Modern No. 20", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.ForeColor = System.Drawing.Color.Black;
+            this.lblText.Location = new System.Drawing.Point(241, 11);
+            this.lblText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(330, 48);
+            this.lblText.TabIndex = 4;
+            this.lblText.Text = "Welcome Back ";
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.btnLogin);
@@ -140,14 +238,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(213, 57);
             this.panel9.TabIndex = 11;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.button1);
-            this.panel10.Location = new System.Drawing.Point(580, 390);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(224, 60);
-            this.panel10.TabIndex = 12;
             // 
             // btnLogin
             // 
@@ -160,6 +250,14 @@
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "Workout Plan";
             this.btnLogin.UseVisualStyleBackColor = false;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.button1);
+            this.panel10.Location = new System.Drawing.Point(580, 390);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(224, 60);
+            this.panel10.TabIndex = 12;
             // 
             // button1
             // 
@@ -181,14 +279,6 @@
             this.panel11.Size = new System.Drawing.Size(219, 60);
             this.panel11.TabIndex = 13;
             // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.button3);
-            this.panel12.Location = new System.Drawing.Point(0, 1);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(213, 60);
-            this.panel12.TabIndex = 14;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
@@ -200,6 +290,15 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Profile";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.button3);
+            this.panel12.Location = new System.Drawing.Point(0, 1);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(213, 60);
+            this.panel12.TabIndex = 14;
             // 
             // button3
             // 
@@ -213,104 +312,6 @@
             this.button3.Text = "Sign Out";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // lblText
-            // 
-            this.lblText.AutoSize = true;
-            this.lblText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblText.Font = new System.Drawing.Font("Modern No. 20", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.ForeColor = System.Drawing.Color.Black;
-            this.lblText.Location = new System.Drawing.Point(241, 11);
-            this.lblText.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(330, 48);
-            this.lblText.TabIndex = 4;
-            this.lblText.Text = "Welcome Back ";
-            // 
-            // panel13
-            // 
-            this.panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel13.BackgroundImage")));
-            this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel13.Location = new System.Drawing.Point(30, 145);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(75, 58);
-            this.panel13.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(15, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 31);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "GymDS";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(156, 97);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 31);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Notifications";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Black;
-            this.panel14.Location = new System.Drawing.Point(21, 129);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(345, 10);
-            this.panel14.TabIndex = 14;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.Gray;
-            this.panel15.Location = new System.Drawing.Point(137, 103);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(10, 219);
-            this.panel15.TabIndex = 15;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(153, 160);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(517, 16);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "*NEW EQUEPMENT ALERT* be sure to check it out when you visit a branch anywhere";
-            // 
-            // panel16
-            // 
-            this.panel16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel16.BackgroundImage")));
-            this.panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel16.Location = new System.Drawing.Point(30, 219);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(75, 69);
-            this.panel16.TabIndex = 17;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(159, 243);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(517, 16);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "*NEW EQUEPMENT ALERT* be sure to check it out when you visit a branch anywhere";
             // 
             // Home
             // 
@@ -332,6 +333,7 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);

@@ -28,5 +28,17 @@ namespace gymApp
             f1.Show();
             this.Hide();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            profile.Show();
+            this.Hide();
+        }
     }
 }

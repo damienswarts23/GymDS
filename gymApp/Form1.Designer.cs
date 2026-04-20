@@ -126,9 +126,10 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(187, 83);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(198, 16);
+            this.label11.Size = new System.Drawing.Size(159, 16);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Your online convenient gym app";
+            this.label11.Text = "Your convenient gym app";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // button2
             // 
