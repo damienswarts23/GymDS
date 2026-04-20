@@ -75,5 +75,10 @@ namespace gymApp
             s3.Show(); 
             this.Hide();
         }
+
+        private void Signup2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
