@@ -40,5 +40,10 @@ namespace gymApp
             profile.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Meal Planner is comming soon...");
+        }
     }
 }
