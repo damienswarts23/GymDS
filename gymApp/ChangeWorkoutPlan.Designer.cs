@@ -397,6 +397,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Name = "ChangeWorkoutPlan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangeWorkoutPlan";
             this.Load += new System.EventHandler(this.ChangeWorkoutPlan_Load);
             this.panel5.ResumeLayout(false);

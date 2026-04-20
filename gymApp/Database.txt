@@ -1,0 +1,102 @@
+CREATE DATABASE IF NOT EXISTS gymds_db;
+USE gymds_db;
+
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    surname VARCHAR(100) NOT NULL,
+    gender VARCHAR(20),
+    date_of_birth DATE,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE goals (
+    goal_id INT AUTO_INCREMENT PRIMARY KEY,
+    goal_name VARCHAR(50) NOT NULL UNIQUE
+);
+
+
+INSERT INTO goals (goal_name) VALUES
+('Legs'),
+('Upper Body'),
+('Arms'),
+('Glutes'),
+('Core');
+
+CREATE TABLE user_goals (
+    user_goal_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    goal_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (goal_id) REFERENCES goals(goal_id) ON DELETE CASCADE,
+    UNIQUE (user_id, goal_id)
+);
+
+
+CREATE TABLE plans (
+    plan_id INT AUTO_INCREMENT PRIMARY KEY,
+    plan_name VARCHAR(100) NOT NULL,
+    plan_type ENUM('Single', 'Group') NOT NULL,
+    duration_days INT DEFAULT NULL,
+    duration_months INT DEFAULT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    billing_type ENUM('Once-Off', 'Per Month') NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE
+);
+
+
+INSERT INTO plans (plan_name, plan_type, duration_days, duration_months, price, billing_type) VALUES
+('7 day unlimited access', 'Single', 7, NULL, 150.00, 'Once-Off'),
+('30 day unlimited access', 'Single', 30, NULL, 400.00, 'Once-Off'),
+('6 month unlimited access', 'Single', NULL, 6, 350.00, 'Per Month'),
+('1 year unlimited access', 'Single', NULL, 12, 299.00, 'Per Month'),
+('7 day unlimited access', 'Group', 7, NULL, 150.00, 'Once-Off'),
+('30 day unlimited access', 'Group', 30, NULL, 400.00, 'Once-Off'),
+('6 month unlimited access', 'Group', NULL, 6, 350.00, 'Per Month'),
+('1 year unlimited access', 'Group', NULL, 12, 299.00, 'Per Month');
+
+
+CREATE TABLE memberships (
+    membership_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    plan_id INT NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE DEFAULT NULL,
+    status ENUM('Active', 'Expired', 'Cancelled', 'Pending') DEFAULT 'Pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (plan_id) REFERENCES plans(plan_id)
+);
+
+
+CREATE TABLE membership_history (
+    history_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    old_plan_id INT,
+    new_plan_id INT,
+    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    reason VARCHAR(255) DEFAULT 'Plan changed by user',
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (old_plan_id) REFERENCES plans(plan_id),
+    FOREIGN KEY (new_plan_id) REFERENCES plans(plan_id)
+);
+
+
+CREATE TABLE payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    membership_id INT NOT NULL,
+    amount_due DECIMAL(10,2) NOT NULL,
+    amount_paid DECIMAL(10,2) NOT NULL,
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    payment_status ENUM('Pending', 'Paid', 'Partial', 'Failed') DEFAULT 'Pending',
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (membership_id) REFERENCES memberships(membership_id) ON DELETE CASCADE
+);
