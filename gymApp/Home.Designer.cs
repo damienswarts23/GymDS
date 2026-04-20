@@ -250,6 +250,7 @@
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "Workout Plan";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel10
             // 

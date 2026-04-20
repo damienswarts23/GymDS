@@ -45,5 +45,12 @@ namespace gymApp
         {
             MessageBox.Show("Meal Planner is comming soon...");
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            ChangeWorkoutPlan workoutPlan = new ChangeWorkoutPlan();
+            workoutPlan.Show();
+            this.Hide();
+        }
     }
 }
