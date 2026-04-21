@@ -16,8 +16,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace gymApp
 {
+
     public partial class SignUp : Form
     {
+        string connectionString = "server= localhost;database=gymds_db;uid=root;pwd=;";
         public SignUp()
         {
             InitializeComponent();
@@ -58,6 +60,9 @@ namespace gymApp
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
+
+            
             //Added the validation to the fields that is collecting the data
             if (string.IsNullOrEmpty(txtUsername.Text))
             {
@@ -119,9 +124,53 @@ namespace gymApp
                                 DateTime date = dob.Value;//Placing the date of birth into a string variable so that it can go into the database and 
                                 string Dob = date.ToString();//Pharsing the date to string
 
+                                //Starts here
                                 DBConnection db = new DBConnection();//object of database class
                                 try
                                 {
+                                    using (MySqlConnection conn = new MySqlConnection(connectionString))
+                                    {
+                                        string sql = "INSERT INTO users (name, surname, gender, date_of_birth, email) VALUES (@name, @surname,@gender,@date_of_birth, @email)";
+                                        conn.Open();
+                                        using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                                        {
+                                            //Placing the variables with the user data into their placeholders 
+                                            cmd.Parameters.AddWithValue("@name", Name);
+                                            cmd.Parameters.AddWithValue("@surname", Surname);
+                                            cmd.Parameters.AddWithValue("@gender", Gender);
+                                            cmd.Parameters.AddWithValue("@date_of_birth", Dob);
+                                            cmd.Parameters.AddWithValue("@email", Email);
+
+
+
+                                            int rowsAffected = cmd.ExecuteNonQuery();//executing the command so that it can happen in the database
+                                            MessageBox.Show(rowsAffected > 0 ? "User added successfully!" : "Failed to add user.");
+
+
+                                            //This is only done so that i can move on to the next page
+                                            Signup2 s2 = new Signup2();
+                                            s2.Show();
+                                            this.Hide();
+                                        }
+                                        //try
+                                        //{
+                                        //    conn.Open();
+                                        //    MessageBox.Show("Connected to MySQL successfully.");
+                                        //}
+                                        //catch (Exception ex)
+                                        //{
+                                        //    MessageBox.Show("Connection failed: " + ex.Message);
+                                        //}
+
+                                    }
+                                    //Ends here
+
+
+
+
+
+
+
                                     // Use your connection class
                                     using (MySqlConnection conn = db.Connect())
                                     {

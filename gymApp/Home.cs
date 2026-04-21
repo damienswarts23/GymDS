@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,7 +44,8 @@ namespace gymApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Meal Planner is comming soon...");
+            MessageBox.Show("Meal plans comming soon...");
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
