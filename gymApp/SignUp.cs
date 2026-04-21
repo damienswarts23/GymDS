@@ -152,52 +152,9 @@ namespace gymApp
                                             s2.Show();
                                             this.Hide();
                                         }
-                                        //try
-                                        //{
-                                        //    conn.Open();
-                                        //    MessageBox.Show("Connected to MySQL successfully.");
-                                        //}
-                                        //catch (Exception ex)
-                                        //{
-                                        //    MessageBox.Show("Connection failed: " + ex.Message);
-                                        //}
-
                                     }
                                     //Ends here
 
-
-
-
-
-
-
-                                    // Use your connection class
-                                    using (MySqlConnection conn = db.Connect())
-                                    {
-                                        //This is the sql query that will place the data into the database
-                                        string query = "INSERT INTO members (name, surname, gender, date_of_birth, email,gym_goals) VALUES (@name, @surname,@gender,@date_of_birth, @email,@gym_goals)";
-                                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                                        {
-                                            //Placing the variables with the user data into their placeholders 
-                                            cmd.Parameters.AddWithValue("@name", Name);
-                                            cmd.Parameters.AddWithValue("@surname", Surname);
-                                            cmd.Parameters.AddWithValue("@gender", Gender);
-                                            cmd.Parameters.AddWithValue("@date_of_birth", Dob);
-                                            cmd.Parameters.AddWithValue("@email", Email);
-                                            cmd.Parameters.AddWithValue("@gym_goals",SelectedGoals);
-
-
-
-                                            int rowsAffected = cmd.ExecuteNonQuery();//executing the command so that it can happen in the database
-                                            MessageBox.Show(rowsAffected > 0 ? "User added successfully!" : "Failed to add user.");
-
-
-                                            //This is only done so that i can move on to the next page
-                                            Signup2 s2 = new Signup2();
-                                            s2.Show();
-                                            this.Hide();
-                                        }
-                                    }
                                 }
                                 catch (Exception ex)
                                 {
