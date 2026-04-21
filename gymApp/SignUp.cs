@@ -64,13 +64,13 @@ namespace gymApp
 
             
             //Added the validation to the fields that is collecting the data
-            if (string.IsNullOrEmpty(txtUsername.Text))
+            if (string.IsNullOrEmpty(txtName.Text))
             {
                 MessageBox.Show("Please fill in your Name");
             }
             else
             {
-                string Name = txtUsername.Text;
+                string Name = txtName.Text;
                 if (string.IsNullOrEmpty(txtSurname.Text))
                 {
                     MessageBox.Show("Please fill in yout Surname");
@@ -174,6 +174,26 @@ namespace gymApp
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
