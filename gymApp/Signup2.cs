@@ -61,7 +61,7 @@ namespace gymApp
                     using (MySqlConnection conn = new MySqlConnection(connectionString))
                     {
                         //This is the sql query that will place the data into the database
-                        string query = "DELETE FROM users WHERE user_id = (SELECT MAX(user_id) FROM users)";
+                        string query = "DELETE FROM users ORDER BY user_id DESC LIMIT 1";
                         conn.Open();
                         using (MySqlCommand cmd = new MySqlCommand(query, conn))
                         {
