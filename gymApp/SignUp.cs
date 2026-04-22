@@ -124,42 +124,41 @@ namespace gymApp
                                 DateTime date = dob.Value;//Placing the date of birth into a string variable so that it can go into the database and 
                                 string Dob = date.ToString();//Pharsing the date to string
 
-                                //Starts here
-                                DBConnection db = new DBConnection();//object of database class
-                                try
+                                if (string.IsNullOrEmpty(txtUsername.Text))
                                 {
-                                    using (MySqlConnection conn = new MySqlConnection(connectionString))
+                                    MessageBox.Show("Please fill in a Username");
+                                }
+                                else
+                                {
+                                    //adding the username to a variable
+                                    string Username = txtUsername.Text;
+                                    if (string.IsNullOrEmpty(txtPassword.Text))
                                     {
-                                        string sql = "INSERT INTO users (name, surname, gender, date_of_birth, email) VALUES (@name, @surname,@gender,@date_of_birth, @email)";
-                                        conn.Open();
-                                        using (MySqlCommand cmd = new MySqlCommand(sql, conn))
-                                        {
-                                            //Placing the variables with the user data into their placeholders 
-                                            cmd.Parameters.AddWithValue("@name", Name);
-                                            cmd.Parameters.AddWithValue("@surname", Surname);
-                                            cmd.Parameters.AddWithValue("@gender", Gender);
-                                            cmd.Parameters.AddWithValue("@date_of_birth", Dob);
-                                            cmd.Parameters.AddWithValue("@email", Email);
-
-
-
-                                            int rowsAffected = cmd.ExecuteNonQuery();//executing the command so that it can happen in the database
-                                            MessageBox.Show(rowsAffected > 0 ? "User added successfully!" : "Failed to add user.");
-
-
-                                            //This is only done so that i can move on to the next page
-                                            Signup2 s2 = new Signup2();
-                                            s2.Show();
-                                            this.Hide();
-                                        }
+                                        MessageBox.Show("Please fill in a password");
                                     }
-                                    //Ends here
+                                    else
+                                    { 
+                                        //Pasword created
+                                        string Password = txtPassword.Text;
 
+                                        //popup confirmation message
+                                        DialogResult confirmation = MessageBox.Show("Please Confirm your details " +
+                                            ""+"\n\n"+Name+"\n"+Surname+"\n"+ Gender+ "\n" + Dob+"\n"+Email
+                                            +"\n"+SelectedGoals+"\n"
+                                            +Username+"\n" + Password,
+                                            "Confirm",
+                                            MessageBoxButtons.YesNo,//the yes no buttons
+                                            MessageBoxIcon.Question);//The question icon
+
+                                        if (confirmation == DialogResult.Yes) { 
+
+                                        }
+
+                                    }
                                 }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("Error: " + ex.Message);
-                                }
+
+                                //Starts here
+                                
                             }
                             else
                             {
@@ -195,6 +194,42 @@ namespace gymApp
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            //Start here
+            //DBConnection db = new DBConnection();//object of database class
+            //try
+            //{
+            //    using (MySqlConnection conn = new MySqlConnection(connectionString))
+            //    {
+            //        string sql = "INSERT INTO users (name, surname, gender, date_of_birth, email) VALUES (@name, @surname,@gender,@date_of_birth, @email)";
+            //        conn.Open();
+            //        using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            //        {
+            //            //Placing the variables with the user data into their placeholders 
+            //            cmd.Parameters.AddWithValue("@name", Name);
+            //            cmd.Parameters.AddWithValue("@surname", Surname);
+            //            cmd.Parameters.AddWithValue("@gender", Gender);
+            //            cmd.Parameters.AddWithValue("@date_of_birth", Dob);
+            //            cmd.Parameters.AddWithValue("@email", Email);
+
+
+
+            //            int rowsAffected = cmd.ExecuteNonQuery();//executing the command so that it can happen in the database
+            //            MessageBox.Show(rowsAffected > 0 ? "User added successfully!" : "Failed to add user.");
+
+
+            //            //This is only done so that i can move on to the next page
+            //            Signup2 s2 = new Signup2();
+            //            s2.Show();
+            //            this.Hide();
+            //        }
+            //    }
+            //    //Ends here
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.Message);
+            //}
 
         }
     }
