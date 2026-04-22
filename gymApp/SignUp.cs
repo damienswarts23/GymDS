@@ -143,9 +143,10 @@ namespace gymApp
 
                                         //popup confirmation message
                                         DialogResult confirmation = MessageBox.Show("Please Confirm your details " +
-                                            ""+"\n\n"+Name+"\n"+Surname+"\n"+ Gender+ "\n" + Dob+"\n"+Email
-                                            +"\n"+SelectedGoals+"\n"
-                                            +Username+"\n" + Password,
+                                            ""+"\n\nName: "+Name+"\nSurname: "+Surname+"\nGender: "+ Gender+ "\nDate of Birth: " + Dob
+                                            +"\nEmail: "+Email
+                                            +"\nGoals Selected: "+SelectedGoals+"\nUsername: "
+                                            +Username+"\nPassword: " + Password,
                                             "Confirm",
                                             MessageBoxButtons.YesNo,//the yes no buttons
                                             MessageBoxIcon.Question);//The question icon
@@ -189,6 +190,9 @@ namespace gymApp
                                             {
                                                 MessageBox.Show("Error: " + ex.Message);
                                             }
+                                        }
+                                        else { 
+                                           MessageBox.Show("Please review your details and try again.");
                                         }
 
                                     }
