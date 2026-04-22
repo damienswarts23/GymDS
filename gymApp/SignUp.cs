@@ -150,8 +150,45 @@ namespace gymApp
                                             MessageBoxButtons.YesNo,//the yes no buttons
                                             MessageBoxIcon.Question);//The question icon
 
-                                        if (confirmation == DialogResult.Yes) { 
+                                        if (confirmation == DialogResult.Yes) {
 
+                                            DBConnection db = new DBConnection();//object of database class
+                                            try
+                                            {
+                                                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                                                {
+                                                    string sql = "INSERT INTO users (name, surname, gender, date_of_birth, email,username, password) VALUES (@name, @surname,@gender,@date_of_birth, @email, @username, @password)";
+                                                    conn.Open();
+                                                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                                                    {
+                                                        //Placing the variables with the user data into their placeholders 
+                                                        cmd.Parameters.AddWithValue("@name", Name);
+                                                        cmd.Parameters.AddWithValue("@surname", Surname);
+                                                        cmd.Parameters.AddWithValue("@gender", Gender);
+                                                        cmd.Parameters.AddWithValue("@date_of_birth", Dob);
+                                                        cmd.Parameters.AddWithValue("@email", Email);
+                                                        cmd.Parameters.AddWithValue("@username", Username);
+                                                        cmd.Parameters.AddWithValue("@password", Password);
+
+
+
+                                                        int rowsAffected = cmd.ExecuteNonQuery();//executing the command so that it can happen in the database
+                                                        MessageBox.Show(rowsAffected > 0 ? "User added successfully!" : "Failed to add user.");
+
+
+                                                        //This is only done so that i can move on to the next page
+                                                        Signup2 s2 = new Signup2();
+                                                        s2.Show();
+                                                        this.Hide();
+                                                    }
+                                                }
+                                                //Ends here
+
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                MessageBox.Show("Error: " + ex.Message);
+                                            }
                                         }
 
                                     }
