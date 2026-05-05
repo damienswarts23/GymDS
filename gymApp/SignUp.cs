@@ -19,7 +19,7 @@ namespace gymApp
 
     public partial class SignUp : Form
     {
-        string connectionString = "server= localhost;database=gymds_db;uid=root;pwd=;";
+        string connectionString = "server=localhost;database=gymds_db;uid=root;pwd=#Chelsea4life;";
         public SignUp()
         {
             InitializeComponent();
@@ -122,7 +122,7 @@ namespace gymApp
                                 
 
                                 DateTime date = dob.Value;//Placing the date of birth into a string variable so that it can go into the database and 
-                                string Dob = date.ToString();//Pharsing the date to string
+                                DateTime Dob = dob.Value.Date;//Pharsing the date to string
 
                                 if (string.IsNullOrEmpty(txtUsername.Text))
                                 {
@@ -158,7 +158,7 @@ namespace gymApp
                                             {
                                                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                                                 {
-                                                    string sql = "INSERT INTO users (name, surname, gender, date_of_birth, email,username, password) VALUES (@name, @surname,@gender,@date_of_birth, @email, @username, @password)";
+                                                    string sql = @"INSERT INTO users (name, surname, gender, date_of_birth, email, username, password_hash) VALUES (@name, @surname, @gender, @date_of_birth, @email, @username, @password_hash)";
                                                     conn.Open();
                                                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                                                     {
@@ -169,8 +169,8 @@ namespace gymApp
                                                         cmd.Parameters.AddWithValue("@date_of_birth", Dob);
                                                         cmd.Parameters.AddWithValue("@email", Email);
                                                         cmd.Parameters.AddWithValue("@username", Username);
-                                                        cmd.Parameters.AddWithValue("@password", Password);
-
+                                                        cmd.Parameters.AddWithValue("@password_hash", Password);
+                                                        cmd.Parameters.AddWithValue("@goals", SelectedGoals);
 
 
                                                         int rowsAffected = cmd.ExecuteNonQuery();//executing the command so that it can happen in the database
